@@ -10,7 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class BrowserFactory {
 	
 	static WebDriver driver;
-	public static WebDriver startBrowser(String browser) {
+	public static WebDriver startDesktopBrowser(String browser) {
 		
 		if(browser.equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", DataProviderFactory.getConfigProperty().getValue("ChromeDriver"));
@@ -27,8 +27,12 @@ public class BrowserFactory {
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("");
+		driver.get("https://evalue.internationaldelivers.com/service/service_info/Welcome.aspx");
 		return driver;
+	}
+	
+	public static void startAppiumBrowser() {
+		
 	}
 
 }
