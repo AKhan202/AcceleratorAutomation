@@ -16,16 +16,16 @@ import com.acceleratorAutomation.utils.Utility;
 public class Home_Page {
 	WebDriver driver;
 	
-	By Username = By.xpath("//*[@name='username']");
+	By Username = By.xpath("//*[@name='u01n233']");
 	By Password = By.xpath("//*[@name='password']");
 	By Login = By.xpath("//*[@type='submit']");
 	
-	public Home_Page(WebDriver ldriver) {
+	public Home_Page(WebDriver ldriver) { // What is ldriver here??//
 		this.driver = ldriver;	
 	}
 	
 	public void homePageTitle() {
-		Assert.assertEquals(driver.getTitle(), "");
+		Assert.assertEquals(driver.getTitle(), "https://evaluet.internationaldelivers.com/service/service_info/Welcome.aspx");
 	}
 	
 	

@@ -3,6 +3,7 @@ package com.acceleratorAutomation.testCase;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.acceleratorAutomation.factory.BrowserFactory;
@@ -13,11 +14,14 @@ public class LoginVerification_Test {
 	WebDriver driver;
 	
 	@BeforeMethod
-	public void testSetup() {
-		driver = BrowserFactory.startDesktopBrowser("Firefox");
+	@Parameters({"browser", "mobile"})
+	public void testSetup(String browsername, String mobilename) {
+		driver = BrowserFactory.startDesktopBrowser(browsername);
+		System.out.println(mobilename);
 	}
 	
 	@Test
+	
 	public void loginVerification() {
 		Login_Page oLogin_Page = new Login_Page(driver);
 		oLogin_Page.loginAction("", "");

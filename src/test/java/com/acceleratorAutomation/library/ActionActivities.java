@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.acceleratorAutomation.utils.Utility;
 
-public class ActionActivities {
+public class ActionActivities { // Will we adding all the action activities here? 
 	
 	public static void moveToElementForClick(WebDriver driver, By locator) {
 		

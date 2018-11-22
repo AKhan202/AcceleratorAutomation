@@ -25,8 +25,14 @@ public class ConfigDataProvider {
 		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		
+			// The below block of code is from Appium Mobile testing//
+		File classpathRoot = new File(System.getProperty("user.dir"));
+		File appDir = new File(classpathRoot, "/Apps/AcceleratorApp/"); 
+		File app = new File(appDir, "Accelerator_3.0Test_TimestampFix.apk");
 		}
 	}
+	
 	
 	public String getValue(String key) {
 		return pro.getProperty(key);
